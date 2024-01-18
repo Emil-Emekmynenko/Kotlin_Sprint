@@ -1,6 +1,6 @@
 package lesson1
 
-fun main(){
+fun main() {
     var numberOrder: Int = 0
 
     val strSuccess: String = "Благодарим за оформление $numberOrder заказа"
