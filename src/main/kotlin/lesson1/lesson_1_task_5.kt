@@ -1,12 +1,13 @@
 package lesson1
 
 fun main(){
+    val constTime = 60
     val seconds: Short = 6480
 
-    val minutesOfSpace = seconds / 60
-    val hoursOfSpace = minutesOfSpace / 60
+    val minutesOfSpace = seconds / constTime
+    val hoursOfSpace = minutesOfSpace / constTime
 
-    val remainMinutesOfHours = minutesOfSpace % 60
+    val remainMinutesOfHours = minutesOfSpace % constTime
     val remainSecondsOfMinutes = seconds % minutesOfSpace
 
     println("Гагарин провёл в космосе:")
