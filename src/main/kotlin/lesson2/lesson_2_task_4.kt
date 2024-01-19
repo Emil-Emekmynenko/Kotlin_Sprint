@@ -1,12 +1,13 @@
 package lesson2
 
 fun main() {
-    val buff = 0.2
+    var buffInPercentage = 20.0
     val crystalOre = 7
     val ironOre = 11
 
-    val buffCrystalOre = (crystalOre * buff).toInt()
-    val buffIronOre = (ironOre * buff).toInt()
+    buffInPercentage /= 100 //преобразование процентного значения в числовое
+    val buffCrystalOre = (crystalOre * buffInPercentage).toInt()
+    val buffIronOre = (ironOre * buffInPercentage).toInt()
 
     println(buffCrystalOre)
     println(buffIronOre)
