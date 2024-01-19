@@ -1,14 +1,15 @@
 package lesson1
 
-fun main(){
-    val constTime = 60
+const val constTime = 60
+
+fun main() {
     val seconds: Short = 6480
 
     val minutesOfSpace = seconds / constTime
-    val hoursOfSpace = minutesOfSpace / constTime
+    val hoursOfSpace = String.format("%02d", minutesOfSpace / constTime)
 
-    val remainMinutesOfHours = minutesOfSpace % constTime
-    val remainSecondsOfMinutes = seconds % minutesOfSpace
+    val remainMinutesOfHours = String.format("%02d", minutesOfSpace % constTime)
+    val remainSecondsOfMinutes = String.format("%02d", seconds % minutesOfSpace)
 
     println("Гагарин провёл в космосе:")
     println("Целых минут - $minutesOfSpace")
@@ -18,5 +19,5 @@ fun main(){
     println("Остаток минут от целых часов - $remainMinutesOfHours")
 
     println("Общее время проведённое в космосе Гагариным:")
-    println("0$hoursOfSpace:$remainMinutesOfHours:0$remainSecondsOfMinutes")
+    println("$hoursOfSpace:$remainMinutesOfHours:$remainSecondsOfMinutes")
 }
