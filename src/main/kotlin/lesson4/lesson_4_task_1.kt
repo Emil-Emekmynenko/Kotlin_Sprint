@@ -1,7 +1,8 @@
 package lesson4
 
+const val allTables = 13
+
 fun main() {
-    val allTables = 13
     val reservedTablesToday = 13
     val reservedTablesTomorrow = 9
     val freeTablesToday = allTables - reservedTablesToday
