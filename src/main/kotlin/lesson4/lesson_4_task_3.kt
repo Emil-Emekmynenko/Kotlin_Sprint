@@ -1,23 +1,23 @@
 package lesson4
 
-const val SUNNY_WEATHER = true
-const val OPEN_AWING = true
+const val IS_SUNNY_WEATHER = true
+const val IS_OPEN_AWING = true
 const val AIR_HUMIDITY = 20
-const val SEASON = "не зима"
+const val IS_SEASON = "зима"
 
 fun main() {
-    val weatherToday = true
-    val openAwingToday = true
+    val isWeatherToday = true
+    val isOpenAwingToday = true
     val airHumidityToday = 20
     val seasonToday = "зима"
 
     println(
         "Благоприятные ли условия сейчас для роста бобовых?: "  +
                 "${
-                    (weatherToday == SUNNY_WEATHER) and
-                            (openAwingToday == OPEN_AWING) and
+                    (isWeatherToday == IS_SUNNY_WEATHER) and
+                            (isOpenAwingToday == IS_OPEN_AWING) and
                             (airHumidityToday == AIR_HUMIDITY) and
-                            (seasonToday == SEASON)
+                            (seasonToday != IS_SEASON)
                 }"
     )
 }
