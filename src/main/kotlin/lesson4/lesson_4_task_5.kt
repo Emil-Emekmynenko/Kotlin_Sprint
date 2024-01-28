@@ -20,13 +20,12 @@ fun main() {
     val shipReadiness = if (isDamage == IS_NOT_DAMAGE &&
         currentCrewComposition >= MIN_NUMBER_OF_CREW &&
         currentCrewComposition <= MAX_NUMBER_OF_CREW &&
-        numberOfBoxesOnBoard > BOX_OF_PROVISIONS
+        numberOfBoxesOnBoard >= BOX_OF_PROVISIONS
     )
         true
-    else if (isDamage == !IS_NOT_DAMAGE &&
-        currentCrewComposition == MAX_NUMBER_OF_CREW &&
+    else if (currentCrewComposition == MAX_NUMBER_OF_CREW &&
         isFavorableWeatherToday == IS_FAVORABLE_WEATHER &&
-        numberOfBoxesOnBoard > BOX_OF_PROVISIONS
+        numberOfBoxesOnBoard >= BOX_OF_PROVISIONS
     )
         true
     else false
